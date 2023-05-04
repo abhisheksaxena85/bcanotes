@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.techofgrowth.bcanotes2.sem1_c_lang">
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/sem1_c_lang_pdf"
+        android:focusable="true"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:id="@+id/sem1_c_lang_banner_id"
+        app:adUnitId="@string/banner_unit_id"
+        app:adSize="BANNER"/>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/main_background_color"
+    tools:context="com.techofgrowth.bcanotes2.Splash_activity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="62dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_290"
+            android:src="@drawable/cloud_data_processing"
+            android:id="@+id/second_logo"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/aldrich"
+            android:text="BCA Syllabus"
+            android:textAlignment="center"
+            android:textColor="#A7CA1E0C"
+            android:textSize="34sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spash_anim"
+            android:fontFamily="@font/biryani_semibold"
+            android:shadowRadius="5"
+            android:text="A Journey Towards Great Learnings"
+            android:textAlignment="center"
+            android:textColor="#35000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

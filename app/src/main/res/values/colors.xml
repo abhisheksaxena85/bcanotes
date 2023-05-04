@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#000000</color>
+    <color name="purple_500">#000000</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FFEB3B</color>
+    <color name="white">#FBFBFB</color>
+    <color name="toolbarTitleColor">#1C1C1C</color>
+    <color name="toolbar_navigation_icon">#1C1C1C</color>
+    <color name="main_background_color">#FEE9AC</color>
+    <color name="main_card_color">#FBDC7F</color>
+    <color name="paper_card_bg">#363636</color>
+    <color name="progressbarColor">#8FFF4747</color>
+    <color name="data_field_color">#98000000</color>
+    <color name="data_text_color">#E3000000</color>
+    <color name="errorIconColor">#AB0C00</color>
+    <color name="errorTextColor">#AB0C00</color>
+    <color name="bordercolorEditText">#E5000000</color>
+</resources>

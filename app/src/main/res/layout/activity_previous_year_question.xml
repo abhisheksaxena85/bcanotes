@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".previous_year_question">
+    <!--Setting toolbar Here-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FEE9AC"
+        android:id="@+id/prev_paper_toolbar"/>
+<!--ScrollView containing whole activity exept ad-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#FEE9AC">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="match_parent">
+<!--This is a layout of first semester-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
+<!--    title of first semester-->
+                <TextView
+                    android:id="@+id/sem1_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Semester 1"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:textAlignment="center"
+                    android:textColor="#620000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+<!--            card 1 of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:id="@+id/sem1_pcs_paper"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+<!--  \Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Personal Computer Software"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+<!--    This the second Card of papers-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    android:id="@+id/sem1_foc_paper"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Computer Fundamental and Programming"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+<!--        This the third card first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem1_fom_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+                    <!--Card Title-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Fundamental Of Management"
+                        android:textColor="@color/paper_card_bg"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+<!--         This is the fourth card of first semester-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen_7"
+                android:paddingBottom="@dimen/dimen_3"
+                android:layout_height="74dp"
+                android:backgroundTint="@color/main_card_color"
+                app:cardUseCompatPadding="true"
+                android:id="@+id/sem1_math_paper"
+                app:cardCornerRadius="@dimen/dimen_7"
+                app:cardElevation="@dimen/dimen_2" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent">
+                    <!-- Card Title-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Mathmatics I"
+                        android:textColor="@color/paper_card_bg"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+<!-- This is the fifth card of first semester-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem1_lc_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Language And Communication"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+<!--This is a layout of Second semester-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
+                <!--    title of first semester-->
+                <TextView
+                    android:id="@+id/sem2_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Semester 2"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:textAlignment="center"
+                    android:textColor="#620000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <!--            card 1 of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:id="@+id/sem2_de_paper"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  \Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Digital Electronics"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--    This the second Card of papers-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    android:id="@+id/sem2_dismath_paper"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Discrete Mathematics"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--        This the third card first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem2_math_second_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Mathematics - II"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--         This is the fourth card of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem2_cPro_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!-- Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Programming in C"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- This is the fifth card of first semester-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem2_manage_eco_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Managerial Economics"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+<!--This is a layout of Third semester-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
+                <!--    title of first semester-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Semester 3"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:textAlignment="center"
+                    android:textColor="#620000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <!--            card 1 of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:id="@+id/sem3_first_paper"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  \Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Computer Oriented Numerical Analysis"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--    This the second Card of papers-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    android:id="@+id/sem3_second_paper"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Computer Organization"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--        This the third card of paper-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem3_third_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Data Structures"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--         This is the fourth card of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem3_fourth_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!-- Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Object Oriented Programming Using C++"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- This is the fifth card of first semester-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem3_fifth_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Organizational Behaviour"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+<!--This is a layout of fourth semester-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
+                <!--    title of fourth semester-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Semester 4"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:textAlignment="center"
+                    android:textColor="#620000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <!--            card 1 of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:id="@+id/sem4_first_paper"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  \Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Operating System"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--    This the second Card of papers-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    android:id="@+id/sem4_second_paper"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Introduction to DBMS SQL"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--        This the third card of paper-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem4_third_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Management Information System"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--         This is the fourth card of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem4_fourth_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!-- Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Visual Basic Programming Language"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- This is the fifth card of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem4_fifth_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="System Analysis And Design"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+<!--This is a layout of fifth semester-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
+                <!--    title of first semester-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Semester 5"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:textAlignment="center"
+                    android:textColor="#620000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <!--            card 1 of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:id="@+id/sem5_first_paper"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  \Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Computer Graphics And Animation"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--    This the second Card of papers-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    android:id="@+id/sem5_second_paper"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Computer Network"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--        This the third card of paper-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem5_third_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Introduction to Internet Programming"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--         This is the fourth card of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem5_fourth_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!-- Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Software Engineering"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- This is the fifth card of first semester-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem5_fifth_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Advanced Computer Architecture"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+<!--This is a layout of sixth semester-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
+                <!--    title of first semester-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="Semester 6"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="17dp"
+                    android:textAlignment="center"
+                    android:textColor="#620000"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <!--            card 1 of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:id="@+id/sem6_first_paper"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!-- Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Multimedia Concepts And Application"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--    This the second Card of papers-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    android:id="@+id/sem6_second_paper"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--  Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Artificial Intelligence"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--        This the third card of paper-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem6_third_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!--Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Web Technology"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!--         This is the fourth card of first semester-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_7"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:layout_height="74dp"
+                    android:backgroundTint="@color/main_card_color"
+                    app:cardUseCompatPadding="true"
+                    android:id="@+id/sem6_fourth_paper"
+                    app:cardCornerRadius="@dimen/dimen_7"
+                    app:cardElevation="@dimen/dimen_2" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+                        <!-- Card Title-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Introduction To .NET"
+                            android:textColor="@color/paper_card_bg"
+                            android:textAlignment="center"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/previous_year_pepar_banner_ad"
+        app:adUnitId="@string/banner_unit_id"
+        android:background="@color/paper_card_bg"
+        app:adSize="BANNER"/>
+</LinearLayout>

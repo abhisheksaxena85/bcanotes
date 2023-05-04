@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEE9AC"
+    android:orientation="vertical"
+    tools:context="com.techofgrowth.bcanotes2.semester3syllabus">
+    <!--Setting toolbar Here-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FEE9AC"
+        android:id="@+id/sem3_toolbar"/>
+    <!--Main body content scrollview -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <!--This is Content Card View first row-->
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="@dimen/dimen_200">
+                <!--First Card of computer oriented numerical analysis-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/sem3_computer_oriented_numerical_analysis"
+                    android:layout_marginLeft="@dimen/dimen_8"
+                    android:layout_marginRight="@dimen/dimen_4"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_card1_sem3"
+                            android:src="@drawable/digital"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_card1_sem3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="Computer Oriented Numerical Analysis"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <!--Second Card of computer organization-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen_8"
+                    android:layout_marginLeft="@dimen/dimen_4"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/sem3_computer_organization"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_card2_sem3"
+                            android:src="@drawable/cloud_storage"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_card2_sem3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="Computer Organization"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <!--This is Content Card View second row-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_200">
+                <!--Third Cardview of data structure-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/sem3_data_structure"
+                    android:layout_marginLeft="@dimen/dimen_8"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginRight="@dimen/dimen_4"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_card3_sem3"
+                            android:src="@drawable/concept_of_data_analysis_and_maintenance"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_card3_sem3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="Data Structures"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <!--Fourth cardView of object oriented programming       -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen_8"
+                    android:layout_marginLeft="@dimen/dimen_4"
+                    app:cardCornerRadius="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/sem3_object_oriented_programming"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_card4_sem3"
+                            android:src="@drawable/software_engineer"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_card4_sem3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="Object Oriented Programming Using C++"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <!--This third row of content CardView-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_200"
+                android:gravity="center_horizontal">
+                <!--Fifth cardview of organizational behaviour        -->
+                <androidx.cardview.widget.CardView
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen_8"
+                    android:layout_marginLeft="@dimen/dimen_8"
+                    app:cardCornerRadius="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F"
+                    android:id="@+id/sem3_organizational_behave">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/image_card5_sem3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_155"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp"
+                            android:src="@drawable/google_trends" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_card5_sem3"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="Organizational Behaviour"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:textSize="19sp"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--Setting Adview here-->
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/sem3_banner_id"
+        android:background="#fff"
+        app:adUnitId="@string/banner_unit_id"
+        app:adSize="BANNER"/>
+    
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:background="#FEE9AC"
+    android:layout_height="match_parent"
+    tools:context="com.techofgrowth.bcanotes2.semester1syllabus">
+<!--Setting toolbar Here-->
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FEE9AC"
+            android:id="@+id/sem1_toolbar"/>
+<!--Main Body Content    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+<!--This is Content Card View first row-->
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="@dimen/dimen_200">
+<!--     First Card of FOC-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/sem1_foc"
+                    android:layout_marginLeft="@dimen/dimen_8"
+                    android:layout_marginRight="@dimen/dimen_4"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_foc_sem1"
+                            android:src="@drawable/attribution_modeling"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_foc_sem1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:text="Fundamental Of Computer"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+<!--    Second Card of FOM        -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen_8"
+                    android:layout_marginLeft="@dimen/dimen_4"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/sem1_fom"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_fom_sem1"
+                            android:src="@drawable/business_merger"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_fom_sem1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:text="Fundamental of Management"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+<!--This is Content Card View second row            -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_200">
+<!--    Third Cardview of PCS        -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/sem1_c_lang"
+                    android:layout_marginLeft="@dimen/dimen_8"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginRight="@dimen/dimen_4"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_clang_sem1"
+                            android:src="@drawable/bca_card_image"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_clang_sem1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:text="C language"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+<!--    Fourth cardView of Language and Communication        -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen_8"
+                    android:layout_marginLeft="@dimen/dimen_4"
+                    app:cardCornerRadius="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/sem1_lang_and_comm"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_140"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_lc_sem1"
+                            android:src="@drawable/social_communication"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_lc_sem1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:text="Language And Communication"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+<!--This third row of content CardView-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_height="@dimen/dimen_200"
+                android:gravity="center_horizontal">
+<!--    Fifth cardview of Math        -->
+                <androidx.cardview.widget.CardView
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen_8"
+                    android:layout_marginLeft="@dimen/dimen_8"
+                    app:cardCornerRadius="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    app:cardUseCompatPadding="true"
+                    android:backgroundTint="#FBDC7F"
+                    android:id="@+id/sem1_math">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_155"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/image_math_sem1"
+                            android:src="@drawable/mathematics"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/image_math_sem1"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginBottom="@dimen/dimen_4"
+                            android:text="Mathmatics"
+                            android:textAlignment="center"
+                            android:textColor="#620000"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="19sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+<!--    Banner Adview of this activity-->
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sem1_banner_id"
+        android:background="#FFFFFF"
+        app:adUnitId="@string/banner_unit_id"
+        app:adSize="BANNER"/>
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416784832900",
+    "project_id": "bcanotes2-5e4ce",
+    "storage_bucket": "bcanotes2-5e4ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416784832900:android:b244b8248214f7c06465d1",
+        "android_client_info": {
+          "package_name": "com.techofgrowth.bcanotes2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416784832900-8ad2eekav20s69puru6d4h8qe5dpvnja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC859N2WP5nWnUWEa3XFDBZQ6J254Q40qQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416784832900-8ad2eekav20s69puru6d4h8qe5dpvnja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

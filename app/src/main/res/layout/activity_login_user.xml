@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_color"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".loginUserActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <!--Main Body part-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingRight="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#00705959">
+                    <!--Main Image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="90dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_height="220dp">
+                        <ImageView
+                            android:id="@+id/login_main_img"
+                            android:layout_width="140dp"
+                            android:layout_height="160dp"
+                            android:src="@drawable/data_report" />
+                        <!-- Main Title Text-->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/aldrich"
+                            android:gravity="center_vertical"
+                            android:text="Start learning with notes"
+                            android:textSize="26sp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:textAlignment="center"
+                            android:textColor="#E41F0000"
+                            tools:ignore="RtlCompat" />
+                    </LinearLayout>
+                    <!--Data field -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:padding="9dp">
+                        <!--User name text edit-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="10dp"
+                            app:boxStrokeErrorColor="@color/errorTextColor"
+                            app:errorTextColor="@color/errorTextColor"
+                            android:textColorHint="@color/data_field_color"
+                            app:errorIconTint="@color/errorIconColor"
+                            app:boxStrokeColor="@color/bordercolorEditText"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/username_text_input_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tooltipText="Email"
+                                android:hint="Username"
+                                android:textColor="@color/data_text_color"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <!-- Password text edit-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/userpassword_text_input_layout"
+                            app:boxStrokeErrorColor="@color/errorTextColor"
+                            app:errorTextColor="@color/errorTextColor"
+                            android:textColorHint="@color/data_field_color"
+                            app:errorIconTint="@color/errorIconColor"
+                            app:boxStrokeColor="@color/bordercolorEditText"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/data_field_color"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:password="true"
+                                android:hint="Password"
+                                android:textColor="@color/data_text_color"
+                                android:tooltipText="Password"
+                                android:inputType="textPassword"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <!--Forget Password Onclick view-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="@dimen/dimen_5"
+                        android:gravity="right">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:layout_height="wrap_content"
+                            android:background="#007A0404"
+                            android:fontFamily="@font/biryani_semibold"
+                            android:text="Forget Password"
+                            android:textColor="#8F3C6185"
+                            android:textSize="14sp"
+                            android:textAlignment="textEnd"
+                            android:id="@+id/forgetPasswordClick"
+                            android:paddingRight="10dp"
+                            android:layout_marginBottom="12dp"/>
+                    </LinearLayout>
+
+
+                    <!--Login Button with cardView   -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="65dp"
+                            android:layout_marginRight="65dp"
+                            android:backgroundTint="@color/main_card_color"
+                            android:textColor="#565656"
+                            android:textSize="15sp"
+                            android:layout_height="wrap_content"
+                            android:text="login"
+                            android:id="@+id/loginUser_btn"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center">
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_50"
+                            android:visibility="gone"
+                            android:theme="@style/progressBar"
+                            android:outlineSpotShadowColor="#fff"
+                            android:outlineAmbientShadowColor="#fff"
+                            android:id="@+id/loginProgressBar"/>
+
+                    </LinearLayout>
+
+
+                    <!-- New User Registration textView    -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/register_new_user_onclick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/biryani_semibold"
+                            android:textAlignment="center"
+                            android:layout_marginTop="24dp"
+                            android:text="New User?  Register Here.!"
+                            android:layout_marginBottom="9dp"
+                            android:textColor="#88000E25"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
