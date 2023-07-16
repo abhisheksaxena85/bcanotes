@@ -19,6 +19,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="33">
         <activity
+            android:name=".chat_gpt_4_web"
+            android:exported="false" />
+        <activity
             android:name=".sem6_fourth_net_paper"
             android:exported="false" />
         <activity

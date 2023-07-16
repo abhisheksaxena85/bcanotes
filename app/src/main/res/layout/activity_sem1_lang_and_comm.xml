@@ -7,14 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.techofgrowth.bcanotes2.sem1_lang_and_comm">
-
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/sem1_lang_pdf"
-        android:focusable="true"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
     <com.google.android.gms.ads.AdView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,4 +14,12 @@
         android:id="@+id/sem1_communication_banner_id"
         app:adUnitId="@string/banner_unit_id"
         app:adSize="BANNER"/>
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/sem1_lang_pdf"
+        android:focusable="true"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
 </LinearLayout>

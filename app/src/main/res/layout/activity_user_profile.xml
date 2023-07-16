@@ -13,10 +13,11 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar"></androidx.appcompat.widget.Toolbar>
+        android:id="@+id/toolbar"/>
         
         <ScrollView
             android:layout_width="match_parent"
+            android:layout_weight="1"
             android:layout_height="match_parent">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -200,4 +201,12 @@
                 </LinearLayout>
     </LinearLayout>
         </ScrollView>
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userProfile_banner_id"
+        app:adUnitId="@string/banner_unit_id"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/main_background_color"
+        app:adSize="BANNER"/>
 </LinearLayout>

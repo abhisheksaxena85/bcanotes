@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/mjpru_syllabus"
-        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:icon="@drawable/baseline_collections_bookmark_24"
         android:title="Syllabus"/>
     <item
         android:id="@+id/menu_home"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/baseline_space_dashboard_24"
         android:title="Home"/>
     <item
         android:id="@+id/menu_share"
@@ -17,16 +17,30 @@
         android:icon="@drawable/ic_baseline_star_rate_24"
         android:title="Rating"/>
     <item
-        android:id="@+id/menu_more_apps"
-        android:icon="@drawable/ic_baseline_more_24"
-        android:title="Get More Apps"/>
-    <item
         android:id="@+id/menu_contact"
-        android:icon="@drawable/ic_baseline_contact_support_24"
+        android:icon="@drawable/baseline_email_24"
         android:title="Contact Us"/>
 
     <item
         android:id="@+id/logout_user"
         android:icon="@drawable/ic_baseline_exit_to_app_24"
         android:title="Log out" />
+    <item android:title="More Apps">
+        <menu>
+            <item
+                android:id="@+id/bba_notes_play"
+                android:icon="@drawable/google_play"
+                android:title="BBA Notes"/>
+            <item
+                android:id="@+id/class11th_math_play"
+                android:icon="@drawable/google_play"
+                android:title="Class 11th NCERT Math"/>
+
+            <item
+                android:id="@+id/class12th_math_play"
+                android:icon="@drawable/google_play"
+                android:title="Class 12th NCERT Math" />
+        </menu>
+    </item>
+
 </menu>

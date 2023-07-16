@@ -8,16 +8,16 @@
     android:layout_height="match_parent"
     tools:context="com.techofgrowth.bcanotes2.sem2_discrete_mathematics">
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/dis_math_pdf"
-        android:layout_weight="1"/>
-
     <com.google.android.gms.ads.AdView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/dis_math_banner_id"
         app:adUnitId="@string/banner_unit_id"
         app:adSize="BANNER"/>
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dis_math_pdf"
+        android:layout_weight="1"/>
+
 </LinearLayout>

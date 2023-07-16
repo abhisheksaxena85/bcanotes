@@ -3,6 +3,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -37,58 +38,79 @@ public class online_compiler extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_online_compiler);
 
-        //Removing the status bar of this activity
-        allfunctions_obj.removeStatusBar(this);
 
-//Checking Internet Connection of device
+        //Checking Internet Connection of device
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         android.net.NetworkInfo wifi = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);//checking wifi connection
-         android.net.NetworkInfo datac = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);//checking Internet connection
+        android.net.NetworkInfo datac = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);//checking Internet connection
 
-        if((wifi != null&datac != null) && (wifi.isConnected() | datac.isConnected())){ // on successful connection
-            ProgressBar progressBar = findViewById(R.id.webProgressbar);
+
+        // on successful connection
+        if((wifi != null&datac != null) && (wifi.isConnected() | datac.isConnected())){
+
+            //WebView
             WebView webView = findViewById(R.id.online_compiler);
+
+            //Loading Alert Dialog box
+            Dialog dialog = new Dialog(online_compiler.this);
+            dialog.setContentView(R.layout.loding_dialog);
+            dialog.setCancelable(false);
+            dialog.show();
+
             webView.setWebViewClient(new WebViewClient(){
+
+                //This Method works with request and recieve
                 @Override
                 public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {//adding webresources request for website
                     return super.shouldOverrideUrlLoading(view, request);
                 }
 
+                //On page started loading
                 @Override
                 public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                    progressBar.setVisibility(View.VISIBLE);
                     super.onPageStarted(view, url, favicon);
                 }
+
+                //When pages finish loading
                 @Override
                 public void onPageFinished(WebView view, String url) {
-                    progressBar.setVisibility(View.GONE);
+
+                    //Removing dialog box on Page loaded
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            dialog.dismiss();
+                        }
+                    },3000);
                     super.onPageFinished(view, url);
                 }
             });
             webView.getSettings().setJavaScriptEnabled(true);
             webView.getSettings().setBuiltInZoomControls(true);
             webView.getSettings().setDisplayZoomControls(false);
-            webView.setWebViewClient(new WebViewClient());
             webView.loadUrl("https://rextester.com/l/c_online_compiler_gcc");//Loading website
+
         }else{
-            // on no connection
+            //On failed connection
             ImageView error_image = findViewById(R.id.error_image);
-            //bitmap of error image
+
+            //Putting error image
             Drawable drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.error_service_unavailable_v1,null);
             error_image.setImageDrawable(drawable);
-            Toast.makeText(this, "Please Turn On your Internet Connection", Toast.LENGTH_LONG).show();
+
+            //Putting error text
+            Toast.makeText(this, "Internet Connnection Failed !!", Toast.LENGTH_LONG).show();
             TextView error_text = findViewById(R.id.error_text);
             error_text.setText("Check Your Internet Connection !");
         }
- // Setting banner adview here
+        // Setting banner adview here
         AdView banner_ad = findViewById(R.id.online_compiler_banner_ad);
         MobileAds.initialize(this);
         AdRequest ad_request = new AdRequest.Builder().build();
         banner_ad.loadAd(ad_request);
 
-//Setting Interstitial ad
-        //Interstitial ad
 
+        //Intertitial Ad
         InterstitialAd.load(this, getString(R.string.inertial_ad_unit_id), ad_request, new InterstitialAdLoadCallback() {
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {

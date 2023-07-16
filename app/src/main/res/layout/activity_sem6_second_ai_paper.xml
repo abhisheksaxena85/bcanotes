@@ -8,17 +8,17 @@
     android:gravity="center_horizontal"
     android:layout_height="match_parent"
     tools:context=".sem6_second_ai_paper">
-
-    <com.github.barteksc.pdfviewer.PDFView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/sem6_ai_Paper_pdf"
-        android:layout_weight="1"/>
-
     <com.google.android.gms.ads.AdView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sem6_ai_banner_id"
         app:adUnitId="@string/banner_unit_id"
         app:adSize="BANNER"/>
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sem6_ai_Paper_pdf"
+        android:layout_weight="1"/>
+
+
 </LinearLayout>

@@ -35,13 +35,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/spash_anim"
-            android:fontFamily="@font/biryani_semibold"
+            android:fontFamily="@font/abeezee"
             android:shadowRadius="5"
             android:text="A Journey Towards Great Learnings"
             android:textAlignment="center"
-            android:textColor="#35000000"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textColor="#88000000"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
     </LinearLayout>
 </RelativeLayout>

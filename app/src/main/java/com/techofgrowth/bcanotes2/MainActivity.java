@@ -47,6 +47,7 @@ NavigationView navigationView;
 Toolbar toolbar;
 CardView semester1card,semester2card,semester3card,semester4card,semester5card,semester6card;
 InterstitialAd inter_ad;
+allFunctions allfunctions_obj = new allFunctions();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -58,17 +59,22 @@ InterstitialAd inter_ad;
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_drawer);
         toolbar = findViewById(R.id.toolbar_main);
-//toolbar for home acitvity
+
+
+        //toolbar for home acitvity
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("BCA NOTES");
         toolbar.setTitleTextColor(getResources().getColor(R.color.toolbarTitleColor));//Changing the color of toolbar title
-//Navigation Drawer
+
+
+        //Navigation Drawer
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.openDrawer,R.string.closeDrawer);//Creating the actionbar drawer toggle
         drawerLayout.addDrawerListener(toggle);//Adding drawer listener
         toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.toolbar_navigation_icon));//Changing the color of Hemberger of navigation
         toggle.syncState();//adding syncstate
 
-      //Adding click funciton to navigation items
+
+        //Adding click funciton to navigation items
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -81,21 +87,24 @@ InterstitialAd inter_ad;
                     startActivity(intent_home);
                     finish();
 
-                }else if(id==R.id.mjpru_syllabus){//syllabus pdf
 
+                //syllabus pdf
+                }else if(id==R.id.mjpru_syllabus){
                     Intent intent_syllabus = new Intent(MainActivity.this,syllabus_pdf.class);
                     startActivity(intent_syllabus);
 
-                } else if(id==R.id.menu_share){ //Sharing
 
+                //Sharing this application with others
+                } else if(id==R.id.menu_share){
                     Intent intent_share = new Intent(Intent.ACTION_SEND);
                     intent_share.setType("text/plain");
                     intent_share.putExtra(Intent.EXTRA_SUBJECT,"Download This App Which Has Complete Notes of BCA");
-                    intent_share.putExtra(Intent.EXTRA_TEXT,"Hi! Check out this awesome BCA Notes Application for BCA students. \nGet it from for free\n https://play.google.com/store/apps/details?id=com.techofgrowth.bcanotes2");
+                    intent_share.putExtra(Intent.EXTRA_TEXT,"Hi! Your friend was using this amazing application for preparation of BCA. Check out this awesome BCA Notes Application for BCA students below. \nGet it for free.\n https://play.google.com/store/apps/details?id=com.techofgrowth.bcanotes2");
                     startActivity(Intent.createChooser(intent_share,"Share"));
 
-                }else if(id==R.id.menu_rating){//Rating
 
+                //Rating on playstore
+                }else if(id==R.id.menu_rating){
                     Uri uri = Uri.parse("market://details?id=" + "com.techofgrowth.bcanotes2");//here will be the package name of live app
                     Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                     goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
@@ -104,15 +113,11 @@ InterstitialAd inter_ad;
                     } catch (ActivityNotFoundException anfe) {
                         startActivity(new Intent(Intent.ACTION_VIEW,
                                 Uri.parse("https://play.google.com/store/apps/details?id=com.techofgrowth.bcanotes2")));
-                                // here above the package name is mentioned in link of app
                     }
 
-                }else if(id==R.id.menu_more_apps){  //more apps
 
-                    Toast.makeText(MainActivity.this, "More Apps Coming Soon...", Toast.LENGTH_LONG).show();
-
-                }else if(id==R.id.menu_contact){//contact
-
+                //Contact here
+                }else if(id==R.id.menu_contact){
                     Intent email_intent = new Intent(Intent.ACTION_SEND);
                     email_intent.setType("message/rfc822");
                     email_intent.putExtra(Intent.EXTRA_EMAIL,new String[]{"abhisheksaxena904411@gmail.com","abhisheksaxena852828@gamil.com"});
@@ -120,26 +125,66 @@ InterstitialAd inter_ad;
                     email_intent.putExtra(Intent.EXTRA_TEXT,"Please! write here your message..");
                     startActivity(email_intent);
 
-                }else{ //Logout user
 
+                //log out user
+                }else if(id==R.id.logout_user){
                     SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean("login_flag",false);
                     editor.apply();
-
-//                  Toast.makeText(MainActivity.this, "Log out successful", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(MainActivity.this,loginUserActivity.class));
                     finishAffinity();
+
+
+                //BBA notes app play store
+                }else if(id==R.id.bba_notes_play){
+                    Uri uri = Uri.parse("market://details?id=" + "com.techofgrowth.bbanotes");//here will be the package name of live app
+                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                    goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                    try {
+                        startActivity(goToMarket);
+                    } catch (ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://play.google.com/store/apps/details?id=com.techofgrowth.bbanotes")));
+                    }
+
+
+                //Class 11th math books play store
+                }else if(id==R.id.class11th_math_play){
+                    Uri uri = Uri.parse("market://details?id=" + "com.techofgrowth.class11thncertmathbook");//here will be the package name of live app
+                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                    goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                    try {
+                        startActivity(goToMarket);
+                    } catch (ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://play.google.com/store/apps/details?id=com.techofgrowth.class11thncertmathbook")));
+                    }
+
+
+                //Class12th math book play store
+                }else if(id==R.id.class12th_math_play){
+                    Uri uri = Uri.parse("market://details?id=" + "com.techofgrowth.class12thncertmathbook");//here will be the package name of live app
+                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                    goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_NEW_DOCUMENT | Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+                    try {
+                        startActivity(goToMarket);
+                    } catch (ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW,
+                                Uri.parse("https://play.google.com/store/apps/details?id=com.techofgrowth.class12thncertmathbook")));
+                    }
                 }
+
+                //Closing drawer on item each click
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
-//Navigation Drawer Completes Here!
 
 
-//Syllabus CardViews Onclick here
 
+
+        //Semester Syllabus Cards
         semester1card = findViewById(R.id.semester1card);
         semester2card = findViewById(R.id.semester2card);
         semester3card = findViewById(R.id.semester3card);
@@ -147,57 +192,23 @@ InterstitialAd inter_ad;
         semester5card = findViewById(R.id.semester5card);
         semester6card = findViewById(R.id.semester6card);
 
-        //first semesterCard click
-        semester1card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,semester1syllabus.class));
-            }
-        });
 
-        //second semesterCard click
-        semester2card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,semester2syllabus.class));
-            }
-        });
-        //thrid semesterCard click
-        semester3card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,semester3syllabus.class));
-            }
-        });
-        //fourth semesterCard click
-        semester4card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,semester4syllabus.class));
-            }
-        });
-        //fifth semesterCard click
-        semester5card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,semester5syllabus.class));
-            }
-        });
-        //sixth semesterCard click
-        semester6card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,semester6syllabus.class));
-            }
-        });
+        //Semester card clicks
+        semester1card.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,semester1syllabus.class)));
+        semester2card.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,semester2syllabus.class)));
+        semester3card.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,semester3syllabus.class)));
+        semester4card.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,semester4syllabus.class)));
+        semester5card.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,semester5syllabus.class)));
+        semester6card.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,semester6syllabus.class)));
 
-//Banner Adview of this activity
+
+        //Banner Adview of this activity
         AdView banner_ad = findViewById(R.id.home_banner_id);
-        MobileAds.initialize(this);
-        AdRequest ad_request = new AdRequest.Builder().build();
-        banner_ad.loadAd(ad_request);
+        allfunctions_obj.bannerAd(banner_ad);
 
-//Adding Inertial ad in this activity
+
+        //Adding Inertial ad in this activity
+        AdRequest ad_request = new AdRequest.Builder().build();
         InterstitialAd.load(this, getString(R.string.inertial_ad_unit_id), ad_request, new InterstitialAdLoadCallback() {
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
@@ -239,88 +250,61 @@ InterstitialAd inter_ad;
                 });
             }
         });
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 if(inter_ad!=null)
                     inter_ad.show(MainActivity.this);
             }
-        },30000);
+        },35000);
 
 
-
-// Oher Section click action
 
         //University syllabus pdf intent
         LinearLayout syllabus_pdf_mjpru = findViewById(R.id.syllabus_pdf_redirect);
-        syllabus_pdf_mjpru.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,syllabus_pdf.class));
-            }
-        });
+        syllabus_pdf_mjpru.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,syllabus_pdf.class)));
+
 
         //previous year question pepar intent passing
         LinearLayout previous_year_pepar = findViewById(R.id.previous_year_pepar);
-        previous_year_pepar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Passing the intent of previous year question pepar
-                Intent intent_qp = new Intent(MainActivity.this,previous_year_question.class);
-                startActivity(intent_qp);
-            }
-        });
+        previous_year_pepar.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,previous_year_question.class)));
+
 
         // online compiler intent passing
         LinearLayout online_compiler = findViewById(R.id.online_compiler);
-        online_compiler.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Passing the intent of previous year question pepar
-                Intent intent_compiler = new Intent(MainActivity.this,online_compiler.class);
-                startActivity(intent_compiler);
-            }
-        });
+        online_compiler.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,online_compiler.class)));
 
-//      //Getting data from firebase realtime database
+
+        //ChatGPT web
+        LinearLayout chat_gpt4 = findViewById(R.id.chat_gpt_ai);
+        chat_gpt4.setOnClickListener(v-> startActivity(new Intent(MainActivity.this,chat_gpt_4_web.class)));
+
+
+        //Getting user information from Other -> [Login, Register, Splash] activities
         Intent Userdetails = getIntent();
-
-        //Getting user information from Splash activity
         String name = Userdetails.getStringExtra("name");
         String usernameId = Userdetails.getStringExtra("usernameid");
         String emailid = Userdetails.getStringExtra("email");
         String phoneNumber = Userdetails.getStringExtra("phoneNumber");
         String password = Userdetails.getStringExtra("password");
 
+
         //Giving name to main activity
         TextView usernametext = findViewById(R.id.username_firebase);
         usernametext.setText(name);
 
+
+        //Passing user details to profile activity
         ImageView userprofileImage = findViewById(R.id.user_profile);
-        userprofileImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent profileIntent = new Intent(MainActivity.this,userProfile.class);
-
-                profileIntent.putExtra("name",name);
-                profileIntent.putExtra("usernameid",usernameId);
-                profileIntent.putExtra("email",emailid);
-                profileIntent.putExtra("phoneNumber",phoneNumber);
-                profileIntent.putExtra("password",password);
-                startActivity(profileIntent);
-            }
+        userprofileImage.setOnClickListener(v-> {
+            Intent profileIntent = new Intent(MainActivity.this,userProfile.class);
+            profileIntent.putExtra("name",name);
+            profileIntent.putExtra("usernameid",usernameId);
+            profileIntent.putExtra("email",emailid);
+            profileIntent.putExtra("phoneNumber",phoneNumber);
+            profileIntent.putExtra("password",password);
+            startActivity(profileIntent);
         });
-
-
-
-
-
-
-
-
-
-
     }
 
     @Override
@@ -328,42 +312,36 @@ InterstitialAd inter_ad;
         if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         }else {
-            AdRequest ad_request = new AdRequest.Builder().build();
 
-//Adding Inertial ad in this activity
+            //Intertitial Ad On Back press
+            AdRequest ad_request = new AdRequest.Builder().build();
             InterstitialAd.load(this, getString(R.string.inertial_ad_unit_id), ad_request, new InterstitialAdLoadCallback() {
                 @Override
                 public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                     super.onAdFailedToLoad(loadAdError);
                 }
-
                 @Override
                 public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                     super.onAdLoaded(interstitialAd);
                     inter_ad = interstitialAd;
-
                     inter_ad.setFullScreenContentCallback(new FullScreenContentCallback() {
                         @Override
                         public void onAdClicked() {
                             super.onAdClicked();
                         }
-
                         @Override
                         public void onAdDismissedFullScreenContent() {
                             super.onAdDismissedFullScreenContent();
                             finishAffinity();
                         }
-
                         @Override
                         public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
                             super.onAdFailedToShowFullScreenContent(adError);
                         }
-
                         @Override
                         public void onAdImpression() {
                             super.onAdImpression();
                         }
-
                         @Override
                         public void onAdShowedFullScreenContent() {
                             super.onAdShowedFullScreenContent();
@@ -374,17 +352,21 @@ InterstitialAd inter_ad;
             });
 
 
-//Alert Dialog Box on exiting the application
+            //On Exit Dailog Box
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
-
             alertDialog.setTitle("Are you sure want to exit?");
             alertDialog.setIcon(R.drawable.ic_baseline_exit_to_app_24);
 
+
+            //On Cancel click
             alertDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                 }
             });
+
+
+            //On Exit Click
             alertDialog.setPositiveButton("EXIT", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
@@ -397,5 +379,4 @@ InterstitialAd inter_ad;
             alertDialog.show();
         }
     }
-
 }

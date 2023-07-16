@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,13 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -33,12 +41,77 @@ import java.util.Map;
 
 public class userProfile extends AppCompatActivity {
 Toolbar toolbar;
-    TextInputLayout name_input_text_layout,username_input_text_layout,email_input_text_layout,phone_number_input_text_layout,password_input_text_layout;
+TextInputLayout name_input_text_layout,username_input_text_layout,email_input_text_layout,phone_number_input_text_layout,password_input_text_layout;
 EditText nameProfile,usernameProfile,emailProfile,phonenumberProfile,passwordProfile;
+InterstitialAd inter_ad;
+allFunctions allfunctions_obj = new allFunctions();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile);
+
+
+        AdView banner_ad = findViewById(R.id.userProfile_banner_id);
+        allfunctions_obj.bannerAd(banner_ad);
+
+        //Adding Inertial ad in this activity
+        AdRequest ad_request = new AdRequest.Builder().build();
+        InterstitialAd.load(this, getString(R.string.inertial_ad_unit_id), ad_request, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+
+            }
+
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                super.onAdLoaded(interstitialAd);
+                inter_ad = interstitialAd;
+
+                inter_ad.setFullScreenContentCallback(new FullScreenContentCallback() {
+                    @Override
+                    public void onAdClicked() {
+                        super.onAdClicked();
+                    }
+
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        super.onAdDismissedFullScreenContent();
+                    }
+
+                    @Override
+                    public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
+                        super.onAdFailedToShowFullScreenContent(adError);
+                    }
+
+                    @Override
+                    public void onAdImpression() {
+                        super.onAdImpression();
+                    }
+
+                    @Override
+                    public void onAdShowedFullScreenContent() {
+                        super.onAdShowedFullScreenContent();
+                        inter_ad = null;
+                    }
+                });
+            }
+        });
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if(inter_ad!=null)
+                    inter_ad.show(userProfile.this);
+            }
+        },4000);
+
+
+
+
+
+
+
+
 
         FirebaseApp.initializeApp(this);
 
@@ -130,8 +203,83 @@ EditText nameProfile,usernameProfile,emailProfile,phonenumberProfile,passwordPro
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                                 if(snapshot.exists()){
-                                                    email_input_text_layout.setError("This email id already registered with another account");
-                                                    profileprogressBar.setVisibility(View.GONE);
+
+                                                    if(emailid.equals(checkuseremail_database)){
+                                                        email_input_text_layout.setError("This email id already registered with another account");
+                                                        profileprogressBar.setVisibility(View.GONE);
+                                                    }else{
+                                                        email_input_text_layout.setError(null);
+                                                        email_input_text_layout.setErrorEnabled(true);
+
+                                                        alertDialog.setTitle("This will Update Your Previous Data");
+                                                        alertDialog.setIcon(R.drawable.baseline_update_24);
+
+
+
+                                                        alertDialog.setNegativeButton("NO, Stop it!", new DialogInterface.OnClickListener() {
+                                                            @Override
+                                                            public void onClick(DialogInterface dialog, int which) {
+                                                                profileprogressBar.setVisibility(View.GONE);
+                                                            }
+                                                        });
+                                                        alertDialog.setPositiveButton("Ok, I Know", new DialogInterface.OnClickListener() {
+                                                            @Override
+                                                            public void onClick(DialogInterface dialog, int which) {
+
+
+                                                                DatabaseReference databasereference = database.getReference("datauser").child(username_input_data);
+
+                                                                databasereference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                                                    @Override
+                                                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                                        if(snapshot.exists()){
+
+                                                                            String namep = nameProfile.getText().toString();
+                                                                            String usernameP = usernameProfile.getText().toString();
+                                                                            String emailP = emailProfile.getText().toString();
+                                                                            String phoneNumP = phonenumberProfile.getText().toString();
+                                                                            String passwordP = passwordProfile.getText().toString();
+
+                                                                            Map<String, Object> updates = new HashMap<>();
+                                                                            updates.put("name", namep);
+                                                                            updates.put("phoneNumber", phoneNumP);
+                                                                            updates.put("username", usernameP);
+                                                                            updates.put("emailId", emailP);
+                                                                            updates.put("password", passwordP);
+                                                                            databasereference.updateChildren(updates);
+
+                                                                            Toast.makeText(userProfile.this, "Information Updated", Toast.LENGTH_SHORT).show();
+                                                                            profileprogressBar.setVisibility(View.GONE);
+
+                                                                            SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
+                                                                            SharedPreferences.Editor editor = preferences.edit();
+                                                                            editor.putBoolean("login_flag", false);
+
+                                                                            editor.putString("name","");
+                                                                            editor.putString("usernameid","");
+                                                                            editor.putString("email","");
+                                                                            editor.putString("phoneNumber","");
+                                                                            editor.putString("password","");
+                                                                            editor.apply();
+                                                                            profileprogressBar.setVisibility(View.GONE);
+
+                                                                            Intent loginProfile_intent = new Intent(userProfile.this,loginUserActivity.class);
+                                                                            startActivity(loginProfile_intent);
+                                                                            finishAffinity();
+                                                                        }
+                                                                    }
+
+                                                                    @Override
+                                                                    public void onCancelled(@NonNull DatabaseError error) {
+
+                                                                    }
+                                                                });
+                                                            }
+                                                        });
+                                                        alertDialog.setCancelable(false);
+                                                        alertDialog.show();
+                                                    }
+
                                                 }else{
                                                     email_input_text_layout.setError(null);
                                                     email_input_text_layout.setErrorEnabled(true);

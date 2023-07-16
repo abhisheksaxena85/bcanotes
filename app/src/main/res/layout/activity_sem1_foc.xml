@@ -12,13 +12,6 @@
     tools:context="com.techofgrowth.bcanotes2.sem1_foc">
 
 
-    <com.github.barteksc.pdfviewer.PDFView
-        android:id="@+id/sem1_foc_pdf"
-        android:focusable="true"
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
     <com.google.android.gms.ads.AdView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,6 +19,13 @@
         android:id="@+id/sem1_foc_banner_id"
         app:adUnitId="@string/banner_unit_id"
         app:adSize="BANNER"/>
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/sem1_foc_pdf"
+        android:focusable="true"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>

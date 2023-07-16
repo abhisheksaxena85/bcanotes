@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".chat_gpt_4_web">
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatgpt_banner_ad"
+        app:adUnitId="@string/banner_unit_id"
+        android:background="#fff"
+        app:adSize="BANNER"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/chat_gpt_webView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/error_image_chatgpt"
+            android:id="@+id/error_text_chatgpt"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_centerInParent="true"
+            android:textColor="#D14C19"/>
+
+        <ImageView
+            android:id="@+id/error_image_chatgpt"
+            android:layout_width="match_parent"
+            android:backgroundTint="#fff"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

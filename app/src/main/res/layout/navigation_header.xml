@@ -9,8 +9,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:paddingTop="25dp"
-            android:layout_marginLeft="@dimen/dimen_10"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="@dimen/dimen_3"
             android:orientation="vertical"
             android:gravity="center_vertical">
            <ImageView
@@ -24,15 +24,18 @@
                 android:paddingLeft="@dimen/dimen_12"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
+                android:fontFamily="@font/krona_one"
                 android:textColor="@color/paper_card_bg"
                 android:text="BCA NOTES"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="viewStart"
-                android:paddingLeft="@dimen/dimen_12"
                 android:layout_marginTop="10dp"
-                android:text="A  Journey Towards Great Learnings"
-                android:textColor="#9E363636"/>
+                android:fontFamily="@font/abeezee"
+                android:paddingLeft="@dimen/dimen_12"
+                android:text="A Journey Towards Great Learnings"
+                android:textAlignment="viewStart"
+                android:textColor="#CD363636" />
         </LinearLayout>
 </LinearLayout>

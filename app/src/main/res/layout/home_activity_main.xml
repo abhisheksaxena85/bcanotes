@@ -84,6 +84,7 @@
                         android:layout_marginBottom="9dp"
                         android:fontFamily="@font/aldrich"
                         android:text=""
+                        android:textStyle="bold"
                         android:textAlignment="center"
                         android:id="@+id/username_firebase"
                         android:textColor="#222222"
@@ -378,6 +379,7 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -389,10 +391,9 @@
                     android:textStyle="bold" />
 
 
-<!--        Opening the syllabus pdf-->
-                <!--This for previous year question pepar-->
+                <!-- Chat-GPT -->
                 <LinearLayout
-                    android:id="@+id/syllabus_pdf_redirect"
+                    android:id="@+id/chat_gpt_ai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -402,19 +403,82 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/dimen_60"
                         android:layout_height="@dimen/dimen_60"
-                        android:backgroundTint="#3C0B66"
-                        app:cardCornerRadius="12dp"
                         android:layout_gravity="center"
-                        app:cardUseCompatPadding="true"
-                        android:padding="12dp">
+                        android:backgroundTint="#396AA0"
+                        android:padding="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardUseCompatPadding="true">
+
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_50"
+                                android:layout_height="@dimen/dimen_50"
+                                android:src="@drawable/chatgpt_icon" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_20"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Learn With Chat-GPT"
+                            android:textColor="#000"
+                            android:textSize="19sp"
+                            android:textStyle="" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#80000000"
+                            android:text="Start Asking Questions to AI"
+                            android:textSize="13sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dimen_8"
+                            android:background="#FFB26A" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--This for previous year question pepar-->
+                <LinearLayout
+                    android:id="@+id/syllabus_pdf_redirect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:paddingLeft="@dimen/dimen_25">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_60"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#396AA0"
+                        android:padding="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
                             <ImageView
                                 android:layout_width="@dimen/dimen_30"
                                 android:layout_height="@dimen/dimen_40"
-                                android:src="@drawable/baseline_collections_bookmark_24"/>
+                                android:src="@drawable/baseline_collections_bookmark_24" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -449,13 +513,12 @@
                 </LinearLayout>
 
 
-
                 <!--This for previous year question pepar-->
                 <LinearLayout
                     android:id="@+id/previous_year_pepar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_25"
+                    android:layout_marginTop="@dimen/dimen_20"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingLeft="@dimen/dimen_25">
@@ -463,19 +526,21 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/dimen_60"
                         android:layout_height="@dimen/dimen_60"
-                        android:backgroundTint="#396AA0"
-                        app:cardCornerRadius="12dp"
                         android:layout_gravity="center"
-                        app:cardUseCompatPadding="true"
-                        android:padding="12dp">
+                        android:backgroundTint="#396AA0"
+                        android:padding="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardUseCompatPadding="true">
+
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:layout_height="match_parent">
-                        <ImageView
-                            android:layout_width="@dimen/dimen_40"
-                            android:layout_height="@dimen/dimen_40"
-                            android:src="@drawable/test"/>
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="@dimen/dimen_40"
+                                android:layout_height="@dimen/dimen_40"
+                                android:src="@drawable/test" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -513,7 +578,7 @@
                     android:id="@+id/online_compiler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_25"
+                    android:layout_marginTop="@dimen/dimen_20"
                     android:layout_marginBottom="@dimen/dimen_25"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -523,19 +588,21 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/dimen_60"
                         android:layout_height="@dimen/dimen_60"
-                        android:backgroundTint="#DD5C38"
-                        app:cardCornerRadius="12dp"
                         android:layout_gravity="center"
-                        app:cardUseCompatPadding="true"
-                        android:padding="12dp">
+                        android:backgroundTint="#396AA0"
+                        android:padding="12dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardUseCompatPadding="true">
+
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:gravity="center">
+
                             <ImageView
                                 android:layout_width="@dimen/dimen_40"
                                 android:layout_height="@dimen/dimen_40"
-                                android:src="@drawable/devices_svgrepo_com"/>
+                                android:src="@drawable/devices_svgrepo_com" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 

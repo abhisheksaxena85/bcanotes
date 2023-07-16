@@ -5,13 +5,14 @@
 
     <!--Sem1_Fom syllabus unit 1-->
     <string name="intro_computer">intro of computer</string>
-    <!--    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>-->
-    <!--    <string name="banner_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--        <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+<!--        <string name="banner_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
 
     <!--This is the ad unit and id of adMob-->
     <string name="app_id">ca-app-pub-2169151503632539~7928196529</string>
     <string name="banner_unit_id">ca-app-pub-2169151503632539/2688883101</string>
     <string name="inertial_ad_unit_id">ca-app-pub-2169151503632539/1684160296</string>
+<!--    -->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
