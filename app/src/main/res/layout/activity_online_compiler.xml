@@ -16,11 +16,9 @@
         app:adUnitId="@string/banner_unit_id"
         android:background="#fff"
         app:adSize="BANNER"/>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
         <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,7 +40,7 @@
             android:backgroundTint="#fff"
             android:layout_height="wrap_content"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </LinearLayout>

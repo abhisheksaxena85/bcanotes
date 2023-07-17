@@ -34,6 +34,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class chat_gpt_4_web extends AppCompatActivity {
     InterstitialAd inter_ad;
+    WebView webView;
     allFunctions allfunctions_obj = new allFunctions();
     @SuppressLint({"MissingInflatedId", "MissingPermission"})
     @Override
@@ -58,7 +59,7 @@ public class chat_gpt_4_web extends AppCompatActivity {
 
 
             //WebView for website
-            WebView webView = findViewById(R.id.chat_gpt_webView);
+            webView = findViewById(R.id.chat_gpt_webView);
 
             //Showing Loading Dialog on activity start
             dialog.show();
@@ -164,6 +165,16 @@ public class chat_gpt_4_web extends AppCompatActivity {
                 if(inter_ad!=null)
                     inter_ad.show(chat_gpt_4_web.this);
             }
-        },2500);
+        },8000);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(webView.canGoBack()){
+            webView.goBack();
+        }else{
+            super.onBackPressed();
+        }
+
     }
 }

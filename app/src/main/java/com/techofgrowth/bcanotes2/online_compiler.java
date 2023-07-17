@@ -31,6 +31,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class online_compiler extends AppCompatActivity {
     InterstitialAd inter_ad;
+    WebView webView;
     allFunctions allfunctions_obj = new allFunctions();
     @SuppressLint({"MissingInflatedId", "MissingPermission"})
     @Override
@@ -49,7 +50,7 @@ public class online_compiler extends AppCompatActivity {
         if((wifi != null&datac != null) && (wifi.isConnected() | datac.isConnected())){
 
             //WebView
-            WebView webView = findViewById(R.id.online_compiler);
+            webView = findViewById(R.id.online_compiler);
 
             //Loading Alert Dialog box
             Dialog dialog = new Dialog(online_compiler.this);
@@ -115,35 +116,28 @@ public class online_compiler extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                 super.onAdFailedToLoad(loadAdError);
-
             }
-
             @Override
             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
                 super.onAdLoaded(interstitialAd);
                 inter_ad = interstitialAd;
-
                 inter_ad.setFullScreenContentCallback(new FullScreenContentCallback() {
                     @Override
                     public void onAdClicked() {
                         super.onAdClicked();
                     }
-
                     @Override
                     public void onAdDismissedFullScreenContent() {
                         super.onAdDismissedFullScreenContent();
                     }
-
                     @Override
                     public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
                         super.onAdFailedToShowFullScreenContent(adError);
                     }
-
                     @Override
                     public void onAdImpression() {
                         super.onAdImpression();
                     }
-
                     @Override
                     public void onAdShowedFullScreenContent() {
                         super.onAdShowedFullScreenContent();
@@ -159,6 +153,15 @@ public class online_compiler extends AppCompatActivity {
                 if(inter_ad!=null)
                     inter_ad.show(online_compiler.this);
             }
-        },2500);
+        },8000);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(webView.canGoBack()){
+            webView.goBack();
+        }else {
+            super.onBackPressed();
+        }
     }
 }

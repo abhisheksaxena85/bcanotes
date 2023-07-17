@@ -198,7 +198,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/image_fom_sem1"
+                                android:layout_alignBottom="@+id/anim_card2_sem1"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerInParent="true"
                                 android:layout_marginBottom="@dimen/dimen_8"
@@ -239,7 +239,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/image_fom_sem1"
+                                android:layout_alignBottom="@+id/anim_card3_sem1"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerInParent="true"
                                 android:layout_marginBottom="@dimen/dimen_8"
@@ -279,7 +279,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/image_fom_sem1"
+                                android:layout_alignBottom="@+id/anim_card4_sem1"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerInParent="true"
                                 android:layout_marginBottom="@dimen/dimen_8"
@@ -314,14 +314,15 @@
                                 android:layout_height="@dimen/dimen_200"
                                 android:layout_alignParentTop="true"
                                 android:src="@drawable/operating_system_upgrade_v1" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignBottom="@+id/image_fom_sem1"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerInParent="true"
                                 android:layout_marginBottom="@dimen/dimen_8"
                                 android:fontFamily="sans-serif-smallcaps"
+                                android:layout_alignBottom="@+id/anim_card5_sem1"
                                 android:text="Semester 5"
                                 android:textAlignment="center"
                                 android:textColor="#620000"
